@@ -3,15 +3,29 @@
 {% block body %}
 
 	<a href="{% url 'flights' %}" class="link">Back to flights</a>
-	<h1 class="header">Flight {{ flight.id }}</h1>
 
-	<ul>
-		<li class='flight'>Origin: {{ flight.origin }}</li>
-		<li class='flight'>Destination: {{ flight.destination }}</li>
-		<li class='flight'>Duration: {{ flight.duration }}</li>
-	</ul>
-	
-	<h2 class="header" style="margin:30px auto;">Passengers</h2>
+<table class="table table-secondary table-striped">
+  <thead>
+    <tr>
+      <th colspan="3" style="text-align: center; zoom:2.3; color: #333333; background:transparent;">Flight {{ flight.id }}</th>
+    </tr>
+    <tr>
+      <th style="width: 33.33%; text-align: center;">Origin</th>
+      <th style="width: 33.33%; text-align: center;">Destination</th>
+      <th style="width: 33.33%; text-align: center;">Duration</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="text-align: center;">{{ flight.origin }}</td>
+      <td style="text-align: center;">{{ flight.destination }}</td>
+      <td style="text-align: center;">{{ flight.duration }}</td>
+    </tr>
+  </tbody>
+</table>
+
+	<h2 class="header cen" style="margin:30px auto;">Passengers</h2>
 
 	<ul>
 		{% for passenger in passengers %}
@@ -21,5 +35,14 @@
 		{% endfor %}
 	</ul>
 
-	
+	<h2>Add Passenger</h2>
+	<form action="{% url 'book' flight.id %}" method='post'>
+	{% csrf_token %}
+			<select name="passenger" style="zoom:1.4; margin-top:0px;">
+					{% for passenger in non_passengers %}
+						<option value="{{ passenger.id }}">{{ passenger }}</option>
+					{% endfor %}
+			</select>
+			<button type="submit" class="link" style="float:none; margin-bottom:100px;zoom:1;">Book</button>
+	</form>
 {% endblock %}

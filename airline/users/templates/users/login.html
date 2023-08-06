@@ -1,0 +1,31 @@
+{% extends "users/layout.html" %}
+{% block body %}
+
+  <div class="login-form">
+    <h2>Login</h2>
+    {% if message %}
+            {% if message == "Logout Successful!" %}
+                <div class="message" style="color:springgreen;">{{ message }}</div>
+            {% else %}
+                <div class="message">{{ message }}</div>
+            {% endif %}
+    {% endif %}
+    <form action="/users/login/" method="post">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" autofocus autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="off">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+
+{% endblock %}
+

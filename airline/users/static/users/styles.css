@@ -1,0 +1,109 @@
+/* styles.css */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  zoom:1.35;
+}
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  zoom:0.5;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1B1B1B;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  float: right; /* Add float property to right-align the link */
+}
+
+/* On hover, change background color and add a subtle shadow */
+.link:hover {
+  background-color: #1B1B1B
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* On active (when clicked), change background color and reduce box-shadow */
+.link:active {
+  background-color: #303030;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom effect on hover */
+.link:hover {
+  transform: scale(1.1);
+}
+
+/* Apply transition for smooth zoom effect */
+.link {
+  transition: transform 0.3s;
+}
+.login-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.message {
+  text-align: center;
+  color: #dc3545; /* Red color for the error message */
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
