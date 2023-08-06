@@ -1,0 +1,74 @@
+/* styles.css */
+/* General link styles */
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  zoom:0.5;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1B1B1B;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  float: right; /* Add float property to right-align the link */
+}
+
+/* On hover, change background color and add a subtle shadow */
+.link:hover {
+  background-color: #1B1B1B
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* On active (when clicked), change background color and reduce box-shadow */
+.link:active {
+  background-color: #303030;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom effect on hover */
+.link:hover {
+  transform: scale(1.1);
+}
+
+/* Apply transition for smooth zoom effect */
+.link {
+  transition: transform 0.3s;
+}
+
+body {
+  background-color: lightblue;
+  zoom: 1.5;
+}
+
+/* Header style */
+.header {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Darken the header text color for better contrast */
+}
+
+/* Flight list style */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flight {
+  width: 60%;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Slightly off-white background color */
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.flight:hover {
+  background-color: #e2e2e2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect on hover */
+  cursor: pointer;
+}
+
