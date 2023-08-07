@@ -1,0 +1,16 @@
+body {
+	font-family:sans-serif;
+	background-color:lightblue;
+	display:inline-block;
+}
+h1 {
+	text-align:center;
+	margin-left:auto;
+}
+button {
+	border:0.5px solid black;
+	zoom:1.5;
+	border-radius:10px;
+	padding:10px;
+	color:black;
+}

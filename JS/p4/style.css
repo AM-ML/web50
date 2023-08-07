@@ -1,0 +1,18 @@
+body{
+	background-color:  #252336;
+	font-family:"Comic Sans MS";
+}
+.h {
+	color:aqua;
+}
+.sub {
+	background-color:#fff;
+	border:0.5px solid white;
+	border-radius:3px;
+	scale:1.13;
+	margin-left:2px;
+	color: #222;
+}
+.sub:active {
+	scale:1.14;
+}
